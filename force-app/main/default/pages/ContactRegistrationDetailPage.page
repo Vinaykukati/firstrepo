@@ -1,0 +1,28 @@
+<apex:page controller="ContactRegistrationDetailPagecontroller" >
+    <apex:form >
+    
+        <apex:pageBlock >
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:pageblockSection title="Detail Page" collapsible="false" rendered="{!pbs1}">
+                <apex:outputField value="{!con.FirstName}"/>
+                <apex:outputField value="{!con.LastName}"/>
+                <apex:outputField value="{!con.Email}"/>
+                <apex:outputField value="{!con.Phone}"/>
+            </apex:pageblockSection>
+              <apex:pageBlockSection title="Edit Page" collapsible="false" rendered="{!pbs2}">
+                <apex:inputField value="{!con.FirstName}"/>
+                <apex:inputField value="{!con.LastName}"/>
+                <apex:inputField value="{!con.Email}"/>
+                <apex:inputField value="{!con.Phone}"/>
+                <apex:inputField value="{!con.UserName__c}"/>
+                <apex:inputField value="{!con.Password__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="Bottom">
+                <apex:commandButton value="Edit" action="{!Edit}" rendered="{!eButton}"/>
+                <apex:commandButton value="Save" action="{!Save}" rendered="{!sButton}"/>
+                <apex:commandButton value="Cancel" action="{!Cancel}" rendered="{!cButton}"/>
+                <apex:commandButton value="Delete" action="{!del}" rendered="{!dButton}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,23 @@
+<apex:page controller="Valuescontroller">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageblockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Num1:</apex:outputLabel>
+                    <apex:inputText value="{!num1}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Num2</apex:outputLabel>
+                    <apex:inputText value="{!num2}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Result</apex:outputLabel>
+                    <apex:outputText value="{!res}"></apex:outputText>
+                </apex:pageBlockSectionItem>
+            </apex:pageblockSection>
+            <apex:pageBlockSection >
+                <apex:commandButton value="Add" action="{!Add}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

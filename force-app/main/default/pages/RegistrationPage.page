@@ -1,0 +1,18 @@
+<apex:page controller="RegistrationPagecontroller">
+<apex:sectionHeader title="{!$User.FirstName} {!$User.LastName}" subtitle="contact Page"/>
+    <apex:form >
+        <apex:pageBlock title="Contact Detail Page">
+            <apex:pageBlockSection >
+                <apex:inputField value="{!con.FirstName}"/>
+                <apex:inputField value="{!con.LastName}"/>
+                <apex:inputField value="{!con.Email}"/>
+                <apex:inputField value="{!con.Phone}"/>
+         
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Register" action="{!Register}"/>
+                <apex:commandButton value="Cancel" action="{!Cancel}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

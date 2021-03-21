@@ -1,0 +1,17 @@
+<aura:component >
+    <lightning:card title="Account Home Page"/>
+    <lightning:card title="CopyRights" footer="Copy Rights"/>
+    <lightning:card title="Example" iconname="Standard.Account">
+        <aura:set attribute="actions">
+        <lightning:buttongroup>
+            <lightning:button label="Account"/>
+        	<lightning:buttonmenu iconname="utility:down" alternativetext="down">
+                <lightning:menuitem label="New"/>
+                <lightning:menuitem label="Edit"/>
+            </lightning:buttonmenu>
+        </lightning:buttongroup>
+        </aura:set>
+        Emp Name: <br/>
+        Emp Phone:<br/>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,41 @@
+<apex:page showHeader="true" sidebar="false" StandardController="Contact" >
+  <apex:form >
+  <apex:sectionHeader title="Contact Edit" subtitle="New Contact" />
+  
+   <br/>
+     <apex:pageBlock title="Contact Edit" tabStyle="Contact">
+     <apex:pageBlockButtons location="top">
+      <apex:commandButton value="Save" action="{!Save}"/>
+       <apex:commandButton value="Save & New" action="{!QuickSave}"/>
+        <apex:commandButton value="Cancel" action="{!Cancel}"/>
+    </apex:pageBlockButtons>
+    
+    <apex:pageBlockSection title="Contact Information" collapsible="false" columns="2">
+     <apex:inputfield value="{!Contact.FirstName}"/>
+      <apex:inputfield value="{!Contact.Phone}"/>
+      <apex:inputfield value="{!Contact.LastName}"/>
+       <apex:inputfield value="{!Contact.HomePhone}"/>
+        <apex:inputfield value="{!Contact.Title}"/>
+         <apex:inputfield value="{!Contact.OtherPhone}"/>
+         <apex:inputfield value="{!Contact.Department}"/>
+         <apex:inputfield value="{!Contact.Fax}"/>
+          <apex:inputfield value="{!Contact.BirthDate}"/>
+           <apex:inputfield value="{!Contact.Email}"/>
+           <apex:inputfield value="{!Contact.LeadSource}"/>
+            <apex:inputfield value="{!Contact.AssistantName}"/>
+             <apex:inputfield value="{!Contact.Prequalified__c}"/>
+             <apex:inputfield value="{!Contact.AssistantPhone}"/>
+           <apex:inputfield value="{!Contact.Loan_Amount__c}"/>
+           </apex:pageblocksection>
+      
+          <apex:pageBlockSection title="Additional Information" collapsible="false" columns="2" >
+           <apex:inputfield value="{!Contact.Languages__c}"/>
+           <apex:inputfield value="{!Contact.Level__c}"/>
+          </apex:pageBlockSection>
+          
+       <apex:pageblockSection title="Description Information" collapsible="false" columns="2">
+        <apex:inputfield value="{!Contact.Description}"/>
+       </apex:pageblockSection>   
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

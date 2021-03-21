@@ -1,0 +1,6 @@
+<apex:page StandardController="Account">
+    <apex:pageBlock title="{!$User.FirstName}{!$User.LastName}">
+    <apex:detail subject="{!Account.OwnerId}" title="false" relatedList="false"/>
+    {!Account.name}account
+   </apex:pageBlock>   
+</apex:page>

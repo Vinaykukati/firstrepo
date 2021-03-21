@@ -1,0 +1,13 @@
+<apex:page controller="Staff">
+    <apex:form >
+        <apex:sectionHeader title="Staff" subtitle="Home" />
+    <apex:pageBlock title="Staff Detials">
+        <apex:pageBlockSection >
+        <apex:outputLabel >Name</apex:outputLabel>
+        
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

@@ -1,0 +1,39 @@
+<apex:page showHeader="true" sidebar="false" standardController="Candidate__c">
+<apex:form >
+  <apex:sectionHeader title="Candidate Edit" subtitle="Candidate.Name"/>
+   <apex:pageBlock >
+    <apex:pageBlockButtons location="top">
+     <apex:commandButton value="Save" action="{!Save}"/>
+     <apex:commandButton value="Save & Edit"/>
+     <apex:commandButton value="Cancel"/>
+    </apex:pageBlockButtons>
+    <apex:pageBlockSection title="Candidate Edit" collapsible="false" columns="1">
+      <apex:inputField value="{!Candidate__c.First_Name__c}"/>
+      <apex:inputField value="{!Candidate__c.Last_Name__c}"/>
+      <apex:inputField value="{!Candidate__c.Zip_PostalCode__c}"/>
+      <apex:inputField value="{!Candidate__c.Country__c}"/>
+      <apex:inputField value="{!Candidate__c.SSN__c}"/>
+    </apex:pageBlockSection>
+      <apex:pageBlockSection title="Address">
+        <apex:inputField value="{!Candidate__c.Street__c}"/>
+        <apex:inputField value="{!Candidate__c.State_Province__c}"/>
+        <apex:inputField value="{!Candidate__c.City__c}"/>
+        <apex:inputField value="{!Candidate__c.Phone__c}"/> <br/>
+        <br/>
+        <apex:inputField value="{!Candidate__c.Mobile__c}"/> <br/>
+        <apex:inputfield value="{!Candidate__c.Fax__c}"/> <br/>
+        <apex:inputField value="{!Candidate__c.Email__c}"/>
+    </apex:pageBlockSection>
+      <apex:pageBlockSection title="Employement" collapsible="false" columns="2">
+        <apex:inputField value="{!Candidate__c.Current_Employed__c}"/>
+        <apex:inputField value="{!Candidate__c.Years_of_Experience__c}"/>
+        <apex:inputfield value="{!Candidate__c.Current_Employer__c}"/>
+      </apex:pageBlockSection>
+        <apex:pageBlockSection title="Additional Details">
+          <apex:inputField value="{!Candidate__c.US_Citizen__c}"/>
+          <apex:inputField value="{!Candidate__c.Education__c}"/>
+          <apex:inputField value="{!Candidate__c.Visa_Required__c}"/>
+        </apex:pageBlockSection>
+   </apex:pageBlock>
+</apex:form>
+</apex:page>

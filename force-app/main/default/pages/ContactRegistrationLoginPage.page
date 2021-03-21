@@ -1,0 +1,24 @@
+<apex:page controller="RegistrationLoginPagecontroller">
+    <apex:form >
+    <apex:pagemessages ></apex:pagemessages>
+        <center>
+        <apex:panelGrid >
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="1" title="Login Form" collapsible="false">
+                <apex:pageblocksectionItem >
+                <apex:outputText >UserName:</apex:outputText>
+                <apex:inputText value="{!UserName}"/>
+                </apex:pageblocksectionItem>
+                <apex:pageblocksectionItem >
+                 <apex:outputText >Password:</apex:outputText>
+                <apex:inputText value="{!Password}"/>
+                </apex:pageblocksectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="Bottom">
+                <apex:commandButton value="Login" action="{!login}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+      </apex:panelGrid>
+      </center>
+    </apex:form>
+</apex:page>

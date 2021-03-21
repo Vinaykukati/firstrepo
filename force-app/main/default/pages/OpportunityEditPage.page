@@ -1,0 +1,39 @@
+<apex:page showHeader="true" sidebar="false" StandardController="Opportunity">
+ <apex:form >
+  <apex:sectionHeader title="Opportunity Edit" subtitle="New Opportunity"/>
+   <apex:pageBlock title="Opportunity Edit" tabStyle="Opportunity" >
+    <apex:pageBlockButtons location="top">
+     <apex:commandButton value="Save" action="{!Save}"/>
+     <apex:commandButton value="Save&New" action="{!QuickSave}"/>
+      <apex:commandButton value="Cancel" action="{!Cancel}"/>     
+    </apex:pageBlockButtons>
+    
+    <apex:pageblocksection title="Opportunity Information" collapsible="fale" columns="2">
+     <apex:inputfield value="{!Opportunity.IsPrivate}"/>
+      <apex:inputfield value="{!Opportunity.Amount}"/>
+      <apex:inputfield value="{!Opportunity.Name}"/>
+      <apex:inputfield value="{!Opportunity.CloseDate}"/>
+      <apex:inputfield value="{!Opportunity.Type}"/>
+      <apex:inputfield value="{!Opportunity.NextStep}"/>
+      <apex:inputfield value="{!Opportunity.LeadSource}"/>
+      <apex:inputfield value="{!Opportunity.StageName}"/>
+      <apex:inputfield value="{!Opportunity.Discount_Percentage__c}"/>
+      <apex:inputfield value="{!Opportunity.Probability}"/>
+      <apex:inputfield value="{!Opportunity.Discount_Percentage__c}"/>
+    </apex:pageblocksection>
+    
+    <apex:pageBlockSection title="Additional Information" collapsible="false" columns="2">
+     <apex:inputfield value="{!Opportunity.OrderNumber__c}"/>
+     <apex:inputfield value="{!Opportunity.MainCompetitors__c}"/>
+     <apex:inputfield value="{!Opportunity.CurrentGenerators__c}"/>
+     <apex:inputfield value="{!Opportunity.DeliveryInstallationStatus__c}"/>
+     <apex:inputfield value="{!Opportunity.TrackingNumber__c}"/>
+     </apex:pageBlockSection>
+     
+     <apex:pageBlockSection title="Description Information" collapsible="false" columns="2">
+     <apex:inputfield value="{!Opportunity.Description}"/>
+     
+     </apex:pageBlockSection>
+    </apex:pageBlock>
+ </apex:form>
+</apex:page>

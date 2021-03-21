@@ -1,0 +1,16 @@
+<apex:page controller="DisplayingAccountRecordscontroller">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:inputField value="{!a.industry}" onclick="{!searchrecords}"/>
+            <apex:inputText value="{!Searchstr}"/>
+            <apex:commandButton value="Search" action="{!searchrecords}"/>
+        </apex:pageBlock>    
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!acc}" var="a">
+                <apex:column value="{!a.name}"/>
+                <apex:column value="{!a.phone}"/>
+                <apex:column value="{!a.industry}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>  
+</apex:page>

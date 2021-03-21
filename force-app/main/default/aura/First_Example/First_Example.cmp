@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name="Name" type="String"/>
+    <aura:attribute name="Age" type="Integer"/>
+    <aura:attribute name="Phone" type="String"/>
+    <aura:attribute name="Email" type="String"/>
+    <lightning:card title="Info">
+        <aura:set attribute="actions">
+            <lightning:buttongroup>
+                <lightning:button label="save"/>
+                <lightning:button label="submit"/>
+            </lightning:buttongroup>
+        </aura:set>
+    </lightning:card>
+</aura:component>

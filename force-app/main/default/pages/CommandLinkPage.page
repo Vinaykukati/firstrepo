@@ -1,0 +1,35 @@
+<apex:page controller="ContactListPageCCController" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:selectList value="{!pageSize}" multiselect="false" size="1">
+                <apex:selectOption itemValue="10" itemLabel="10"/>
+                <apex:selectOption itemValue="25" itemLabel="25"/>
+                <apex:selectOption itemValue="50" itemLabel="50"/>
+                <apex:selectOption itemValue="75" itemLabel="75"/>
+                <apex:selectOption itemValue="100" itemLabel="100"/>
+                <apex:actionSupport event="onchange" action="{!conLimt}" reRender="pb2"/>
+            </apex:selectList>
+        </apex:pageBlock>
+        <apex:pageBlock title="List of Contacts">
+            <apex:pageBlockTable value="{!contacts}" var="con">
+                    <apex:column >
+                        <apex:commandLink value="{!con.Name}" action="{!newLinkAction}">
+                            
+                        </apex:commandLink>
+                    </apex:column>
+                <apex:column value="{!con.Email}"/>
+                <apex:column value="{!con.Phone}"/>
+            </apex:pageBlockTable>
+            <apex:outputText value="Total Records Size: {!totalRecSize}"/>
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="New" action="{!newAction}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="<< First"/>
+                <apex:commandButton value="< Previous"/>
+                <apex:commandButton value="Next >>"/>
+                <apex:commandButton value="Last >>"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

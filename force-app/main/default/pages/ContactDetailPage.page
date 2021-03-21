@@ -1,0 +1,33 @@
+<apex:page showHeader="true" Sidebar="true" StandardController="Contact" >
+<apex:form >
+ <apex:sectionHeader title="{!contact.Name}"/>
+ <apex:pageBlock title="Contact Detail">
+   <apex:pageBlockButtons location="top">
+   <apex:commandButton value="Edit"/>
+   <apex:commandButton value="Delete" action="{!Delete}"/>
+   <apex:commandButton value="Clone"/>
+   </apex:pageBlockButtons>
+   <apex:pageBlockSection >
+   <apex:outputField value="{!Contact.Name}"/>
+   <apex:outputField value="{!Contact.Phone}"/>
+   <apex:outputField value="{!contact.Title}"/>
+   <apex:outputField value="{!contact.HomePhone}"/>
+   <apex:outputField value="{!contact.Department}"/>
+   <apex:outputField value="{!contact.MobilePhone}"/>
+   <apex:outputField value="{!contact.BirthDate}"/>
+   <apex:outputField value="{!contact.OtherPhone}"/>
+   <apex:outputField value="{!contact.LeadSource}"/>
+   <apex:outputField value="{!contact.Fax}"/>
+   <apex:outputField value="{!contact.Prequalified__c}"/>
+   <apex:outputField value="{!contact.Email}"/>
+   <apex:outputField value="{!contact.Loan_Amount__c}"/>
+   <apex:outputField value="{!contact.AssistantName}"/>
+   <apex:outputField value="{!contact.Languages__c}"/>
+   <apex:outputField value="{!contact.AssistantPhone}"/>
+   <apex:outputField value="{!contact.Level__c}"/>
+   </apex:pageBlockSection>
+  </apex:pageBlock>
+</apex:form>
+  <apex:relatedList list="Cases"/>
+
+</apex:page>

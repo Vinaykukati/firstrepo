@@ -1,0 +1,41 @@
+<apex:page standardController="Account" sidebar="false" renderAs="pdf" showHeader="false"> 
+<apex:form > 
+<apex:pageBlock >
+ <apex:image url="{!$Resource.the_image}" height="150" width="150" style=""/>
+     <div style="float:Right">
+     <apex:outputText >Date:</apex:outputText>
+     <apex:outputText value="{0, date, medium}">
+         <apex:param value="{!now()}"/>
+     </apex:outputText>
+    </div>
+    <br/>
+    <apex:outputLabel >{!$Label.My_First}</apex:outputLabel>
+    <apex:outputField value="{!Account.Name}"/><br/>
+       <apex:outputField value="{!Account.BillingCity}"/>
+      
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="List of Contacts">
+    <apex:pageBlockTable value="{!Account.Contacts}" var="con" width="500" border="2" style="font:red">
+       
+        <apex:column value="{!con.Name}"/>
+        <apex:column value="{!con.Acc_Record__c}"/>
+        <apex:column value="{!con.Phone}"/>
+    </apex:pageBlockTable><br/>
+    <apex:pageBlock title="List of Opportunities">
+    <apex:pageBlockTable value="{!Account.Opportunities}" var="con" width="550" border="2">
+        <apex:column value="{!con.Name}"/>
+        <apex:column value="{!con.Type}"/>
+    </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock >
+    <h1 style="color:Blue:size-10px">List of Cases</h1>
+        <apex:pageBlockTable value="{!Account.Cases}" var="cas" width="150" border="2">
+            <apex:column value="{!cas.CaseNumber}"/>
+            <apex:column value="{!cas.Status}"/>
+            <apex:column value="{!cas.Priority}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

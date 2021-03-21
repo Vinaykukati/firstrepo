@@ -1,0 +1,41 @@
+<apex:page standardController="Account" recordSetVar="acc">
+    <apex:form >
+        <apex:pageBlock >
+        <apex:panelGrid columns="5">
+               
+                <apex:outputText >View:</apex:outputText>
+                <apex:selectList value="{!filterid}" size="1">
+                    <apex:selectOptions value="{!listviewoptions}"/>
+                    <apex:actionSupport event="onchange" reRender="id"/>
+                    
+                </apex:selectList>
+                <apex:commandButton value="Go" action="{!null}"/><br/>
+                
+           </apex:panelGrid>
+           </apex:pageblock>
+           <apex:pageblock >
+           <apex:pageBlockButtons >
+               <apex:commandButton value="New" action="{!}"/>
+           </apex:pageBlockButtons>
+            <apex:pageblockTable value="{!acc}" var="a" id="id">
+               <apex:column value="{!a.name}"/>
+               <apex:column value="{!a.phone}"/>
+            </apex:pageblockTable>
+            <apex:panelGrid columns="5">
+                <apex:commandButton value="First" action="{!First}"/>
+                <apex:commandButton value="Next" action="{!Next}"/>
+                <apex:commandButton value="Previous" action="{!Previous}"/>
+                <apex:commandButton value="Last" action="{!last}"/>
+            <apex:panelGroup >
+            <apex:outputText value="listSize"></apex:outputtext>
+            <apex:selectList value="{!pageSize}" size="1" id="ThePage">
+                <apex:selectOption itemValue="5" itemLabel="5"/>
+                <apex:selectOption itemValue="10" itemLabel="10"/>
+                <apex:selectOption itemValue="20" itemLabel="20"/>
+            </apex:selectList>
+            <apex:actionSupport event="onchange" action="{!Null}" reRender="PageSize"/>
+            </apex:panelGroup>
+            </apex:panelGrid>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

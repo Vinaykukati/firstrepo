@@ -1,0 +1,25 @@
+<apex:page controller="Page1">
+<apex:sectionHeader title="New Account and Opportunity" subtitle="page 1 of 3"/>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection title="Account">
+                <apex:inputField value="{!acc.name}" id="accName"/>
+                <apex:inputField value="{!acc.Rating}" id="accRating"/>
+                <apex:inputField value="{!acc.AnnualRevenue}"/>
+                <apex:inputField value="{!acc.phone}"/>
+                <apex:inputField value="{!acc.industry}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="New Opportunity" collapsible="false">
+                <apex:inputField value="{!opp.name}"/>
+                <apex:inputField value="{!opp.Type}"/>
+                <apex:inputField value="{!opp.CloseDate}"/>
+                <apex:inputField value="{!opp.StageName}"/>
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Next" action="{!Step2}"/>
+                
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

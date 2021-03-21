@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute name="Empsal" type="integer"/>
+    <aura:attribute name="discount" type="decimal"/>
+    <aura:attribute name="Total" type="integer"/>
+    <aura:handler name="init" value="{!this}" action="{!c.calc}"/>
+    <lightning:card title="Employee Salary">
+        Empsal:{!v.Empsal}<br/>
+        discount:{!v.discount}<br/>
+        Total:{!v.Total}
+    </lightning:card>
+</aura:component>

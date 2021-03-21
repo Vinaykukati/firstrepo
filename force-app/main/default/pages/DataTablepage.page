@@ -1,0 +1,15 @@
+<apex:page standardController="Account" recordSetVar="acc">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:dataTable value="{!acc}" var="a" border="2">
+            <apex:column headerValue="Name">
+                {!a.name}
+
+            </apex:column> 
+               <apex:column headerValue="Phone">
+                {!a.Phone}
+               </apex:column>
+            </apex:dataTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

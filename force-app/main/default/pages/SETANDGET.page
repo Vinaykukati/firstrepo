@@ -1,0 +1,14 @@
+<apex:page controller="SETANDGET" >
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+    <apex:outputText >Please provide your Name</apex:outputText>
+    <apex:inputText value="{!Name}"/>
+            <apex:commandButton value="click" reRender="one" />
+            <apex:outputlabel id="one">your nme us ==={!Name}</apex:outputLabel>
+            
+            
+            </apex:pageBlockSection>
+    </apex:pageBlock>
+   </apex:form>
+</apex:page>

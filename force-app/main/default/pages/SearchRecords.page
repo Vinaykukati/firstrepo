@@ -1,0 +1,19 @@
+<apex:page controller="SOSLController" showHeader="false">
+  <apex:form >
+  <apex:inputText value="{!searchStr}"/>
+    <apex:commandButton value="Search in Account" action="{!soslDemo_method}"/>
+     
+    <apex:pageBlock title="Accounts" id="acct">
+    <apex:pageblockTable value="{!accList }" var="acc">
+          <apex:column headerValue="Name">
+          <apex:commandLink action="{!redirect}">
+          <apex:outputField value="{!acc.name}"/>
+          </apex:commandLink>
+          </apex:column>
+          <apex:column value="{!acc.Type}"/>
+     
+       </apex:pageblockTable>
+       
+    </apex:pageBlock> 
+     </apex:form>
+ </apex:page>

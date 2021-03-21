@@ -1,0 +1,18 @@
+<apex:page standardController="Account" recordSetvar="accounts">
+  
+  <apex:form id="theForm">
+    <apex:panelGrid columns="2">
+      <apex:outputLabel value="View:"/>
+      <apex:selectList value="{!filterId}" size="1">
+        <apex:actionSupport event="onchange" rerender="pb"/>
+        <apex:selectOptions value="{!listviewoptions}"/>
+      </apex:selectList>
+    </apex:panelGrid>
+    <apex:pageBlock title="Viewing Accounts" id="pb" rendered="{!$ObjectType.Account.accessible}">
+    <apex:pageBlockTable value="{!accounts}" var="acc">
+        <apex:column value="{!acc.name}"/>
+    </apex:pageBlockTable>
+     </apex:pageBlock>
+  </apex:form> 
+ 
+</apex:page>

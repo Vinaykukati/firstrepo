@@ -1,0 +1,19 @@
+<apex:page standardController="Account" recordSetVar="Account">
+<apex:form >
+    <apex:pageblock title="Display records using Dtata Table">
+       <apex:pageblocksection >
+                <apex:repeat value="{!Account}" var="a" >
+                
+                <apex:outputLabel title="Name" />
+                <apex:outputField value="{!a.Name}"/>
+               <apex:outputText title="Phone"></apex:outputText> 
+               <apex:outputField value="{!a.Phone}"/>
+                
+                </apex:repeat>
+        
+        </apex:pageBlockSection>
+    
+    </apex:pageblock>
+</apex:form>
+  
+</apex:page>

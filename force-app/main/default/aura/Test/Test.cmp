@@ -1,0 +1,17 @@
+<aura:component >
+    <aura:attribute name="Aval" type="Integer"/>
+    <aura:attribute name="Bval" type="integer"/>
+    <aura:attribute name="Cval" type="integer"/>
+    <lightning:card title="Calculator" iconName="Utility:company">
+        <aura:set attribute="footer">
+            <lightning:buttongroup>
+                <lightning:button label="submit"/>
+                <lightning:button label="Save"/>
+            </lightning:buttongroup>
+        </aura:set>
+         <lightning:input label="Enter Aval" value="{!v.Aval}"/>
+     <lightning:input label="Enter Bval" value="{!v.Bval}"/>
+     <lightning:input label="Cval" value="{!v.Cval}"/>  
+    </lightning:card>
+   
+</aura:component>

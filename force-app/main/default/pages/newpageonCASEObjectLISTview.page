@@ -1,0 +1,19 @@
+<apex:page standardController="Account" recordSetVar="cas">
+<apex:pageBlock >
+<apex:form >
+    <apex:panelGrid columns="2">
+      <apex:outputLabel value="view"/>
+      <apex:selectList value="{!filterId}" size="1">
+      <apex:actionSupport event="onchange" reRender="list"/>
+      <apex:selectOptions value="{!listviewoptions}"/>
+      
+      </apex:selectList>
+    </apex:panelGrid>
+    <apex:pageBlockSection >
+        <apex:dataList value="{!cas}" var="c" id="list">
+        {!c.name}
+        </apex:dataList>
+    </apex:pageBlockSection>
+</apex:form>
+</apex:pageBlock>
+</apex:page>

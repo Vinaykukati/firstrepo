@@ -1,0 +1,26 @@
+<apex:page controller="RegistrationDetailsPageController">
+    <apex:form >
+        <apex:pageBlock >
+        <apex:pageMessages ></apex:pageMessages>
+            <apex:pageBlockSection title="DetailPage" collapsible="false" rendered="{!pbs1}">
+                <apex:outputField value="{!con.FirstName}"/>
+                <apex:outputField value="{!con.LastName}"/>
+                <apex:outputField value="{!con.Email}"/>
+                <apex:outputField value="{!con.Phone}"/>
+                <apex:outputField value="{!con.UserName__c}"/>
+                <apex:outputField value="{!con.Password__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageblockSection title="EditPage" collapsible="false" rendered="{!pbs2}">>
+                <apex:inputField value="{!con.FirstName}"/>
+                <apex:inputField value="{!con.LastName}"/>
+                <apex:inputField value="{!con.Email}"/>
+                <apex:inputField value="{!con.Phone}"/>
+            </apex:pageblockSection>
+            <apex:pageblockButtons location="top">
+                <apex:commandButton value="Edit" action="{!Edit}" rendered="{!eButton}"/>
+                <apex:commandButton value="Save" action="{!Save}" rendered="{!sButton}"/>
+                <apex:commandButton value="Cancel" action="{!Cancel}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

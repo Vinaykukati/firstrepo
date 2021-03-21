@@ -1,0 +1,10 @@
+<apex:page controller="Wizardpage">
+    <apex:form >
+        <apex:pageBlock title="page2 of 3">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Previous" action="{!Firstpage}"/>
+                <apex:commandButton value="Next" action="{!Thirdpage}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

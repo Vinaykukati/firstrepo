@@ -1,0 +1,19 @@
+<apex:page standardController="Account" recordSetvar="accounts">
+  <apex:pageBlock title="Viewing Accounts">
+  <apex:form id="theForm">
+    <apex:panelGrid columns="2">
+      <apex:outputLabel value="View:"/>
+      <apex:selectList value="{!filterId}" size="1">
+        <apex:actionSupport event="onchange" rerender="list"/>
+        <apex:selectOptions value="{!listviewoptions}"/>
+      </apex:selectList>
+    </apex:panelGrid>
+    <apex:pageBlockSection columns="1"><br>
+    {!$Label.My_First}</br>
+      <apex:dataTable var="a" value="{!accounts}" id="list">
+        <apex:column value="{!a.name}"/>
+      </apex:dataTable>
+    </apex:pageBlockSection>
+  </apex:form> 
+  </apex:pageBlock>
+</apex:page>

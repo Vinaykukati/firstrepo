@@ -1,0 +1,53 @@
+<apex:page standardController="Account"  sidebar="false"  recordSetVar="accs">
+  <apex:form >
+ <apex:sectionHeader title="Accounts" subtitle="Home" />
+<apex:pageBlock title="Recent Accounts">
+<table border="2">
+  <apex:repeat value="{!accs}" var="acc">
+    <tr>
+    <apex:outputText title="Name"> 
+      <td><apex:outputText value="{!acc.Name}"/></td>
+      </apex:outputText>
+    
+       <td><apex:outputText value="{!acc.Phone}"/></td>
+      
+    </tr>
+  </apex:repeat>
+</table>
+</apex:pageblock>
+<apex:sectionHeader title="Contacts" subtitle="Home"/>
+<apex:pageBlock title="Recent Contacts" >
+<table border="2">
+  <apex:repeat value="{!accs}" var="acc">
+    <tr>
+      <apex:repeat value="{!acc.Contacts}" var="cont">
+     
+         <td><apex:outputText value="{!cont.Name}"/></td>
+       
+         <td><apex:outputText value="{!cont.Phone}"/></td>
+         
+      </apex:repeat>
+    </tr>
+  </apex:repeat>
+</table>
+</apex:pageBlock>
+<apex:sectionHeader title="Opportunities" subtitle="Home"/>
+<apex:pageBlock title="Recent Opportunities">
+    <table border="2">
+  <apex:repeat value="{!accs}" var="acc">
+    <tr>
+      <apex:repeat value="{!acc.opportunities}" var="opp">
+     
+         <td><apex:outputText value="{!opp.Name}"/></td>
+       
+         <td><apex:outputText value="{!opp.stageName}"/></td>
+         
+      </apex:repeat>
+    </tr>
+  </apex:repeat>
+</table>
+
+</apex:pageblock>
+
+  </apex:form>
+</apex:page>

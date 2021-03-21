@@ -1,0 +1,13 @@
+<apex:page controller="PositionPagecontroller">
+    <apex:form >
+        <apex:pageBlock title="Position Edit Page">
+            <apex:pageBlockSection >
+                <apex:inputField value="{!pos.Name}"/>
+                <apex:inputField value="{!pos.Min_Positions__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!Save}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

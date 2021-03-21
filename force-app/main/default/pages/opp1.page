@@ -1,0 +1,10 @@
+<apex:page controller="SetterMethodscontroller">
+<apex:sectionHeader title="New Custom Contact" subtitle="Page 2 of 3"/>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

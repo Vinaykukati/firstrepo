@@ -1,0 +1,21 @@
+<apex:page standardController="Position__c"  showHeader="true" sidebar="false" recordSetVar="pos">
+        <apex:sectionHeader title="Positions" subtitle="Home" />
+        <apex:form >
+        <apex:pageBlock title="Recent Positions">
+          <apex:pageBlockTable value="{!pos}" var="p">
+            <apex:column value="{!p.Name}"/>
+            <apex:column value="{!p.Status__c}"/>
+        </apex:pageBlockTable>
+
+        <apex:pageBlockButtons location="top">
+            <apex:commandButton value="New" action="{!Save}" />
+            
+            
+            </apex:pageBlockButtons>
+        
+        
+        </apex:pageBlock> 
+    
+    
+    </apex:form>
+</apex:page>

@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute name="AVal" type="integer"/>
+    <aura:attribute name="BVal" type="integer"/>
+    <aura:attribute name="CVal" type="integer"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doit}"/>
+    <lightning:card title="Calculator">
+        Aval:{!v.AVal}<br/>
+        BVal:{!v.BVal}<br/>
+        CVal:{!v.CVal}
+    </lightning:card>
+</aura:component>

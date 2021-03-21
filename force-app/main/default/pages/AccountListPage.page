@@ -1,0 +1,23 @@
+<apex:page standardController="Account" recordSetvar="accounts">
+  <apex:pageBlock title="Viewing Accounts">
+  <apex:form id="theForm">
+    <apex:pageBlockSection >
+      <apex:PageBlockTable var="a" value="{!accounts}">
+        <apex:column value="{!a.name}"/>
+      </apex:PageBlockTable>
+    </apex:pageBlockSection>
+    <apex:panelGrid columns="2">
+      <apex:commandLink action="{!previous}">Previous</apex:commandlink>
+      <apex:commandLink action="{!next}">Next</apex:commandlink>
+    </apex:panelGrid>
+    
+    <apex:pageBlockSection >         
+            <apex:repeat value="{!$ObjectType.Account.FieldSets.Field_Set_for_Account}" var="f">        
+            <apex:inputField value="{!Account[f]}"> 
+            </apex:inputField>    
+    </apex:repeat>
+    </apex:pageBlockSection>
+    
+  </apex:form> 
+  </apex:pageBlock>
+</apex:page>

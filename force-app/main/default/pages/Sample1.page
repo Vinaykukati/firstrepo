@@ -1,0 +1,14 @@
+<apex:page controller="Sample1controller">
+<apex:form >
+<apex:pageBlock title="Bookings List">
+<apex:commandButton value="Display Records" action="{!GetRecordPage}" reRender="recMatch" id="bor"/>
+
+<apex:pageblocktable id="bookrec" rendered="{!display}" value="{!RecordFetching}" var="fetch">
+
+    <apex:column value="{!fetch.id}"/>
+    <apex:column value="{!fetch.name}"/>
+    </apex:pageblocktable>   
+    </apex:pageBlock>
+
+</apex:form>
+</apex:page>

@@ -1,0 +1,17 @@
+<apex:page standardController="Account" recordSetVar="acc">
+    <apex:form >
+        <apex:pageBlock title="DetailPage on ListPage">
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{!acc}" var="a">
+                    <apex:column >
+                        <apex:commandLink value="{!a.name}">
+                        <apex:param value="{!a.id}" name="accountid"/>
+                        </apex:commandLink>
+                    </apex:column>
+                    <apex:column value="{!a.type}"/>
+                </apex:pageBlockTable>
+                <apex:detail relatedList="false" subject="{!$CurrentPage.parameters.accountid}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,10 @@
+<apex:page controller="SOSLController">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+               <apex:outputField value="{!acc.name}"/>
+               <apex:outputField value="{!acc.type}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

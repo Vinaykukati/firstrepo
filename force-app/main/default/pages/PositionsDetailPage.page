@@ -1,0 +1,9 @@
+<apex:page controller="PositionPagecontrollerpage">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageblockTable value="{!position}" var="p" >
+                <apex:outputField value="{!p.name}"/>
+            </apex:pageblockTable> 
+        </apex:pageBlock>      
+    </apex:form>
+</apex:page>

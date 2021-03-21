@@ -1,0 +1,13 @@
+<apex:page showHeader="true" sidebar="false" standardController="Opportunity" recordSetVar="Oppor">
+<apex:form >
+  <apex:sectionHeader title="Opportunities" subtitle="Home"/>
+   <apex:pageBlock title="Recent Opportunity">
+    <apex:pageBlockTable value="{!Oppor}" var="Opp" >
+     <apex:column value="{!Opp.Name}"/>
+    </apex:pageBlockTable>
+      <apex:pageBlockButtons location="top">
+    <apex:commandButton value="New"/>
+   </apex:pageBlockButtons>
+   </apex:pageBlock>
+</apex:form>
+</apex:page>

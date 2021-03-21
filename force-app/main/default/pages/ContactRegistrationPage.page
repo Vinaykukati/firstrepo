@@ -1,0 +1,39 @@
+<apex:page controller="ContactRegistrationPagecontroller">
+    <apex:form >
+    <center>
+    <apex:panelGrid columns="1">
+        
+       <apex:pageBlock >
+       <apex:pageBlockSection columns="1" title="Registration Form" collapsible="false">
+       
+           <apex:pageBlockSectionItem >
+               <apex:outputtext >FirstName:</apex:outputtext>   
+                   <apex:inputField value="{!con.FirstName}"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputtext >LastName:</apex:outputtext>
+                    <apex:inputField value="{!con.LastName}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputText >Email:</apex:outputText>
+                    <apex:inputField value="{!con.Email}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputText >Phone:</apex:outputText>
+                    <apex:inputField value="{!con.Phone}"/>
+                </apex:pageBlockSectionItem>
+                
+           </apex:pageBlockSection>                       
+            <apex:pageBlockButtons location="Bottom">
+                <apex:commandButton value="Register" action="{!Register}"/>
+                <apex:commandButton value="Cancel" action="{!Cancel}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        
+        </apex:panelGrid>
+        </center>
+    </apex:form>
+</apex:page>

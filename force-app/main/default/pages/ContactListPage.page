@@ -1,0 +1,14 @@
+<apex:page showHeader="true" sidebar="false" standardController="Contact" recordSetVar="Con">
+ <apex:form >
+  <apex:sectionHeader title="Contacts" subtitle="Home"/>
+   <apex:pageBlock title="Recent Contacts">
+   <apex:pageBlockButtons location="top">
+     <apex:commandButton value="New"/>
+   </apex:pageBlockButtons>
+   <apex:pageBlockTable value="{!Con}" var="c">
+     <apex:column value="{!c.Name}"/>
+     
+   </apex:pageBlockTable>
+   </apex:pageBlock>
+ </apex:form>
+</apex:page>

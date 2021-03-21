@@ -1,0 +1,20 @@
+<apex:page standardController="Opportunity" recordSetVar="opp">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection title="Change">
+                <apex:inputField value="{!Opportunity.StageName}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{!Selected}" var="o">
+                    <apex:column value="{!o.name}"/>
+                    <apex:column value="{!o.StageName}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Save" action="{!Save}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

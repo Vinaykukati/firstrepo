@@ -1,0 +1,34 @@
+<apex:page standardController="Account" recordSetVar="Accounts" tabStyle="Account">
+    <apex:form id="Raja" >       
+     <apex:pageBlock title="Edit Accounts" >           
+      <apex:pageMessages ></apex:pageMessages>           
+       <apex:pageBlockButtons >
+              <apex:commandButton value="Save" action="{!save}"/>
+              <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>           
+             <apex:pageBlockTable value="{!Accounts}" var="acc">
+                <apex:column value="{!acc.name}"/>                  
+                <apex:column headerValue="Webiste">
+                    <apex:inputField value="{!acc.Website}"/>
+                </apex:column>                              
+                </apex:pageBlockTable>            
+                    <apex:panelGrid columns="5">                
+                        <apex:commandButton value="|<" action="{!first}"  />
+                <apex:commandButton value="<" action="{!previous}" rendered="{!HasPrevious}" />
+                <apex:commandButton value=">" action="{!next}" rendered="{!HasNext}" />
+                <apex:commandButton value=">|" action="{!last}"/>                
+                    <apex:panelGroup >
+                    <apex:outputText value="Records/Page"></apex:outputText>&nbsp;&nbsp;                    
+                        <apex:selectList value="{!PageSize}" size="1">
+                        <apex:selectOption itemValue="5" itemLabel="5"></apex:selectOption>
+                        <apex:selectOption itemValue="10" itemLabel="10"></apex:selectOption>
+                        <apex:selectOption itemValue="15" itemLabel="15"></apex:selectOption>
+                        <apex:selectOption itemValue="20" itemLabel="20"></apex:selectOption>
+                    </apex:selectList>&nbsp;&nbsp;                    
+                    <apex:commandButton action="{!NULL}" value="Update Page Size"/>
+                   
+                </apex:panelGroup>           
+                </apex:panelGrid>         
+                </apex:pageBlock>
+    </apex:form>
+</apex:page>

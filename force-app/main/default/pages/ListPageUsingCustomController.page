@@ -1,0 +1,9 @@
+<apex:page controller="Acclist">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!Account}" var="a">
+                <apex:column value="{!a.name}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

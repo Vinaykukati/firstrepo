@@ -1,0 +1,27 @@
+<apex:page controller="RegistrationContactListPagecontroller">
+    <apex:form >
+    <apex:pageBlock >
+        <apex:actionSupport event="onchange" rerender="pbt1" action="{!conlimit}"/>
+        <apex:selectList value="{!Size}" size="1">
+            <apex:selectOption itemValue="{!10}" itemLabel="10"/>
+            <apex:selectOption itemValue="20" itemLabel="20"/>
+            <apex:selectOption itemValue="30" itemLabel="30"/>
+        </apex:selectList>
+    </apex:pageBlock>
+        <apex:pageBlock title="List of Contacts" id="pbt1">
+                <apex:pageBlockTable value="{!Contact}" var="con">
+                    <apex:column >
+                      <apex:commandLink value="{!con.name}" action="{!newlinkaction}">
+                        <apex:param value="{!con.Id}" name="conId"/>
+                      </apex:commandLink>
+                    </apex:column>
+                    <apex:column value="{!con.phone}"/>
+                    <apex:column value="{!con.Email}"/>
+                </apex:pageBlockTable>
+               <apex:pageBlockButtons >
+                   <apex:commandButton value="New" action="{!newaction}"/>
+               </apex:pageBlockButtons>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

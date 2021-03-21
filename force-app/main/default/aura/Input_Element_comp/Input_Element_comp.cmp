@@ -1,0 +1,14 @@
+<aura:component >
+	<lightning:card title="Input Element">
+        <lightning:input label="Aval" aura:id="aid"/>
+        <lightning:input label="Bval" aura:id="bid"/>
+        <lightning:input label="Result" aura:id="cid"/>
+        <aura:set attribute="actions">
+        	<lightning:buttongroup>
+                <lightning:button label="Add" onclick="{!c.call}" aura:id="one"/>
+                <lightning:button label="Mul" onclick="{!c.call}" aura:id="two"/>
+                <lightning:button label="cancel" onclick="{!c.call}" aura:id="three"/>
+            </lightning:buttongroup>
+        </aura:set>
+    </lightning:card>
+</aura:component>

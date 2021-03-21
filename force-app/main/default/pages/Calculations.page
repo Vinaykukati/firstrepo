@@ -1,0 +1,23 @@
+<apex:page controller="Calcs">
+    <apex:form >
+        <apex:pageBlock >
+      
+                <apex:outputLabel >num1</apex:outputLabel>
+                <apex:inputText value="{!num1}"/>
+                <apex:outputLabel >num2</apex:outputLabel>
+                <apex:inputText value="{!num2}"/>
+                <apex:commandButton value="Add" action="{!Calc}"/>
+                <apex:outputLabel >Result</apex:outputLabel>
+                <apex:outputText value="{!res}"></apex:outputText>
+                <apex:commandButton value="sub" action="{!subs}"/>
+                <apex:outputLabel >Result:</apex:outputLabel>
+                <apex:outputText value="{!s}"></apex:outputText>
+                <apex:commandButton value="Mul" action="{!mult}"/>
+                <apex:outputLabel >Result</apex:outputLabel>
+                <apex:outputText value="{!m}" ></apex:outputtext>
+                    <apex:outputText value="{0,date}">
+                        <apex:param value="{!Today}" />
+                    </apex:outputText>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

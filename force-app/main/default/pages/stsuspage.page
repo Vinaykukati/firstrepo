@@ -1,0 +1,19 @@
+<apex:page standardController="Account">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:inputField value="{!Account.name}"/>
+                <apex:inputField value="{!Account.Type}"/>
+                    <apex:actionStatus startText="Processing" stopText="Stop" id="StartProcessing">
+                    <apex:facet name="Start">
+                        <apex:image value="/img/loading32.gif" style="height: 15px;"></apex:image>
+                    </apex:facet>
+                    <apex:facet name="Stop">
+                        <apex:commandButton value="Save" action="{!Save}" status="StartProcessing" reRender="StartProcessing"/>
+                    </apex:facet>
+                </apex:actionStatus>
+
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

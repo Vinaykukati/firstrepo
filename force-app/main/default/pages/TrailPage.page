@@ -1,0 +1,22 @@
+<apex:page standardController="Account" recordSetVar="acc">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:outputText >View:</apex:outputText>
+            <apex:selectList value="{!filterid}" size="1">
+                <apex:selectOptions value="{!listviewoptions}"/>
+                <apex:actionSupport event="onchange" reRender="thelist"/>
+            </apex:selectList>
+        </apex:pageBlock>
+                <apex:pageBlock title="List of Accounts">
+                    <apex:pageBlockTable value="{!acc}" var="a" id="thelist">
+                        <apex:column headerValue="Name">
+                            <apex:outputField value="{!a.name}">
+                            <apex:inlineEditSupport event="ondblclick"/>
+                            </apex:outputField>
+                        </apex:column>
+                        <apex:column value="{!a.phone}"/>
+                        <apex:column value="{!a.Type}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+            </apex:form>
+        </apex:page>

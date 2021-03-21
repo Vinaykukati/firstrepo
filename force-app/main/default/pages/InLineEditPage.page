@@ -1,0 +1,24 @@
+<apex:page standardController="Account" recordSetVar="acc">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!acc}" var="a">
+                <apex:column headerValue="Name">
+                    <apex:outputField value="{!a.name}">
+                    <apex:commandLink value="{!a.name}"/>                 
+                    <apex:inlineEditSupport event="ondblclick"/>
+                    </apex:outputField>
+                </apex:column>
+                
+                <apex:column headerValue="Rating">
+                    
+                    <apex:outputField value="{!a.rating}">
+                     <apex:inlineEditSupport event="onclick"/>
+                    
+                     </apex:outputField>
+                </apex:column>
+               
+            </apex:pageBlockTable>
+        
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

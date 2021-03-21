@@ -1,0 +1,27 @@
+<apex:page standardController="Quote" recordSetVar="quotes">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlock title="Quatation">
+             <apex:outputText value="{!NOW()}"></apex:outputText>
+             </apex:pageBlock>
+             <center>
+             <apex:pageBlockSection title="Quote"></apex:pageBlockSection> </center>
+             <apex:pageBlockSection >
+                 <apex:outputText value="Customer Name:"></apex:outputText>
+                 <apex:outputText value="Prepared by:"></apex:outputText>
+                 <apex:outputText value="Project:"></apex:outputText>
+                 <apex:outputText value="Head of sales:"></apex:outputText>
+                 <apex:outputText value="Project Name:"></apex:outputText><br>
+                 <apex:outputText value="Unit Number:"></apex:outputText></br>
+                 <apex:outputText value="Payment Plan:"></apex:outputText><br>
+                 <apex:outputText value="Price:"></apex:outputText></br>
+                 <apex:outputText value="Reservation Fee:"></apex:outputText>
+             </apex:pageBlockSection>
+             <apex:pageBlockSection title="SECTIONB-PAYMENTPLAN" collapsible="false" columns="4">
+                 <apex:pageBlockTable value="{!quotes}" var="q" border="2">
+                     <apex:column />
+                 </apex:pageBlockTable>
+             </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

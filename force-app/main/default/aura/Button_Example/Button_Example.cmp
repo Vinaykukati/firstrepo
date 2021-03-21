@@ -1,0 +1,10 @@
+<aura:component>
+    <!-- bare -->
+    <lightning:buttonIcon iconName="utility:settings" variant="bare" onclick="{! c.handleClick }" alternativeText="Settings" title="Settings" />
+    <lightning:buttonIcon iconName="utility:down" alternativeText="down"/>
+    <lightning:buttonMenu iconName="utility:down" alternativeText="ShowMore">
+        <lightning:menuitem label="Account"/>
+        <lightning:menuitem label="Contact"/>
+    </lightning:buttonMenu>
+                          
+</aura:component>

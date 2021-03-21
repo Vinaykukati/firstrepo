@@ -1,0 +1,23 @@
+<apex:page standardController="Account" recordSetVar="Accounts" >
+<apex:pageBlock >
+<apex:form >
+  <apex:panelGrid columns="3">
+    <apex:outputLabel value="Views:"/>
+      <apex:selectList size="1" value="{!Filterid}">
+        <apex:selectOptions value="{!listviewoptions}"/>
+             </apex:selectList>
+                     <apex:commandButton value="go" action="{!list}" />
+
+  </apex:panelGrid>
+  <apex:pageblockSection title="Recent Account " columns="2">
+      <apex:dataList value="{!Accounts}" var="a" id="rew" >
+            {!a.Name}" <br/>
+            {!a.phone}
+      
+      </apex:dataList>
+  
+  
+  </apex:pageblockSection>
+</apex:form>
+</apex:pageBlock>
+ </apex:page>

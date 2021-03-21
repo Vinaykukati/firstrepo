@@ -1,0 +1,8 @@
+<apex:page controller="AccountCon" >
+   <apex:form >
+    Enter Name:<apex:inputText value="{!acc.name}"/><br/> <br/>
+    Enter Phone:<apex:inputText value="{!acc.phone}"/> <br/>
+   
+   <apex:commandButton value="Save" Action="{!Save}"/>
+   </apex:form>
+</apex:page>

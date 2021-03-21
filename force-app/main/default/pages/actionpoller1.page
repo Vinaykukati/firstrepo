@@ -1,0 +1,9 @@
+<apex:page controller="actionpoller1controller">
+    <apex:form >
+        <apex:pageBlock id="Test">
+            <p>Refresh Page{!count}</p>
+        </apex:pageBlock>    
+            <apex:actionPoller action="{!method}"  interval="5" reRender="Test"/>
+        
+    </apex:form>
+</apex:page>

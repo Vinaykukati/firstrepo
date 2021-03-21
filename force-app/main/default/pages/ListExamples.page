@@ -1,0 +1,9 @@
+<apex:page controller="listexamplecontroller">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageblockTable value="{!Result}" var="a">
+            
+            </apex:pageblockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page standardController="Account" recordSetVar="acc" contentType="application/vnd.ms-excel#SalesForceExport.xls">
+<apex:form >
+ <apex:pageBlock title="Account Details">
+    <apex:pageBlockTable value="{!acc}" var="a">
+       <apex:column value="{!a.name}"/>
+    </apex:pageBlockTable>
+    <apex:commandbutton value="Next" action="{!next}"/>
+    <apex:commandButton value="previous0" action="{!previous}"/>
+ </apex:pageBlock>
+ <apex:outputLabel >{!$User.FirstName}</apex:outputLabel>
+ <apex:outputLabel >{!$User.LastName}!</apex:outputLabel>
+</apex:form>
+</apex:page>

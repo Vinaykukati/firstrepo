@@ -1,0 +1,43 @@
+<apex:page standardController="Account" showHeader="true" sidebar="false" renderAs="">
+    <apex:form >
+        <apex:sectionHeader title="{!Account.Name}" />
+        <apex:pageBlock title="Account Details" >
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Edit" action="{!edit}"/>
+                <apex:commandButton value="Cancel" action="{!Cancel}"/>
+            </apex:pageBlockButtons>
+            <apex:inlineEditSupport />
+            <apex:pageBlockSection >
+                <apex:outputField value="{!Account.Name}"/>
+                <apex:outputField value="{!Account.Phone}"/>
+                <apex:outputField value="{!Account.AccountNumber}"/>
+                <apex:outputfield value="{!Account.Fax}"/>
+                <apex:outputField value="{!Account.Site}"/>
+                <apex:outputField value="{!Account.Website}"/>
+                <apex:outputField value="{!Account.Type}"/>
+                <apex:outputField value="{!Account.TickerSymbol}"/>
+                <apex:outputField value="{!Account.Industry}"/>
+                <apex:outputField value="{!Account.Ownership}"/>
+                <apex:outputField value="{!Account.AnnualRevenue}"/>
+                <apex:outputField value="{!Account.NumberOfEmployees}"/>
+                <apex:outputField value="{!Account.AnnualRevenue}"/>
+                <apex:outputField value="{!Account.Sic}"/>
+                <apex:outputField value="{!Account.Potential_Value__c}"/>
+                <apex:outputField value="{!Account.SLA__c}"/>
+                <apex:outputField value="{!Account.CustomerPriority__c}"/>
+                <apex:outputField value="{!Account.SLASerialNumber__c}"/>
+                <apex:outputField value="{!Account.SLAExpirationDate__c}"/>
+                <apex:outputField value="{!Account.UpsellOpportunity__c}"/>
+                <apex:outputField value="{!Account.Active__c}"/>
+            </apex:pageBlockSection>
+        
+     
+        
+        </apex:pageBlock>
+    
+    
+    </apex:form>
+    <apex:relatedList list="Contacts"/>
+    <apex:relatedList list="OpenActivities"/>
+    <apex:relatedList list="Opportunities"/>
+</apex:page>

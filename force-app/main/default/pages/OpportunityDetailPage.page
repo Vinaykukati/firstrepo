@@ -1,0 +1,32 @@
+<apex:page showHeader="true" sidebar="false" standardController="Opportunity">
+<apex:form >
+<apex:sectionHeader title="Opportunities" subtitle="Opportunity.Name"/>
+ <apex:pageBlock title="Opportunity Detail">
+  <apex:pageBlockButtons location="top">
+   <apex:commandButton value="Edit"/>
+   <apex:commandButton value="Delete"/>
+   <apex:commandButton value="Colne"/>
+  </apex:pageBlockButtons>
+  <apex:pageBlockSection >
+   <apex:outputField value="{!Opportunity.Name}"/>
+   <apex:outputField value="{!Opportunity.Amount}"/>
+   <apex:outputField value="{!Opportunity.IsPrivate}"/>
+   <apex:outputField value="{!Opportunity.ExpectedRevenue}"/>
+   <apex:outputField value="{!Opportunity.Type}"/>
+   <apex:outputField value="{!Opportunity.CloseDate}"/>
+   <apex:outputField value="{!Opportunity.LeadSource}"/>
+   <apex:outputField value="{!Opportunity.NextStep}"/>
+   <apex:outputField value="{!Opportunity.Discount_Percentage__c}"/>
+   <apex:outputField value="{!Opportunity.StageName}"/>
+   <apex:outputField value="{!Opportunity.Amount__c}"/>
+   <apex:outputField value="{!Opportunity.MainCompetitors__c}"/>
+   <apex:outputField value="{!Opportunity.Discounted_Amount__c}"/>
+   <apex:outputField value="{!Opportunity.DeliveryInstallationStatus__c}"/>
+   <apex:outputField value="{!Opportunity.Potential_Value__c}"/>
+   <apex:outputField value="{!Opportunity.OrderNumber__c}"/>
+   <apex:outputField value="{!Opportunity.CurrentGenerators__c}"/>
+   <apex:outputField value="{!Opportunity.TrackingNumber__c}"/>
+  </apex:pageBlockSection>
+ </apex:pageBlock>
+</apex:form>
+</apex:page>

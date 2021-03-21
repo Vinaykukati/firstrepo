@@ -1,0 +1,12 @@
+<apex:page controller="PositionPagecontrollerpage" >
+    <apex:form >
+        <apex:pageBlock >           
+            <apex:pageBlockTable value="{!position}" var="p">
+                <apex:column headerValue="Name">
+                    <apex:commandLink value="{!p.name}" action="{!redirectdetailpage}"/>
+                </apex:column>
+                <apex:column value="{!p.Status__c}"/>
+            </apex:pageBlockTable>    
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

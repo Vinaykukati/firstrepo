@@ -1,0 +1,16 @@
+<apex:page standardController="Test__c" >
+ <apex:form >
+   <apex:pageBlock >
+     <apex:pageBlockSection >
+       <apex:outputLabel value="First Name">
+        <apex:inputText />
+       </apex:outputLabel>
+ 
+     <apex:selectList id="country" label="Country"  size="1">
+     <apex:selectOption itemLabel="India" itemValue="India"></apex:selectOption>
+     </apex:selectList>
+     </apex:pageBlockSection>
+   </apex:pageBlock>
+ </apex:form>
+  
+</apex:page>
