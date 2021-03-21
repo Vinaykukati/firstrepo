@@ -13,7 +13,7 @@ public with sharing class ContactListPageCCController {
         pageSize =10;
         //conList = [SELECT Name, FirstName, LastName, Phone, Email FROM Contact ORDER BY Name ASC LIMIT 10];
         totalRecSize = [SELECT count() FROM Contact];
-        System.debug('>>>>>Basequery : '+baseQuery);
+        System.debug('>>>Basequery : '+baseQuery);
         System.debug('>>>BaseQuueywithLimit: '+baseQuery+ ' LIMIT ' + pageSize);
         conList = Database.Query(baseQuery+' LIMIT '+ pageSize);
     }
