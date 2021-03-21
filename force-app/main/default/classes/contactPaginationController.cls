@@ -1,6 +1,6 @@
 public class contactPaginationController{
  
- //variable used in page..
+ //variable used in page.
  Public Integer size{get;set;}
  Public Integer noOfRecords{get; set;}
  public List<SelectOption> paginationSizeOptions{get;set;}
